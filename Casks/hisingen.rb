@@ -5,7 +5,7 @@ cask "hisingen" do
   url "https://github.com/NicolasKheirallah/Hisingen/releases/download/v#{version}/Hisingen.dmg",
       verified: "github.com/NicolasKheirallah/Hisingen/"
   name "Hisingen"
-  desc "Polestar and Volvo vehicles in the macOS menu bar"
+  desc "Polestar and Volvo vehicles in the menu bar"
   homepage "https://github.com/NicolasKheirallah/Hisingen"
 
   livecheck do

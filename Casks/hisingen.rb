@@ -1,0 +1,33 @@
+cask "hisingen" do
+  version "1.2.2"
+  sha256 "e8bfff2310d47975e44e02dad7e70e39921479d7477b5eedab9b0e1ca15941c2"
+
+  url "https://github.com/NicolasKheirallah/Hisingen/releases/download/v#{version}/Hisingen.dmg",
+      verified: "github.com/NicolasKheirallah/Hisingen/"
+  name "Hisingen"
+  desc "Polestar and Volvo vehicles in the macOS menu bar"
+  homepage "https://github.com/NicolasKheirallah/Hisingen"
+
+  livecheck do
+    url :homepage
+    strategy :github_latest
+  end
+
+  depends_on macos: ">= :sonoma"
+
+  app "Hisingen.app"
+
+  caveats <<~EOS
+    Hisingen may ask for Keychain and Accessibility access on first launch.
+    Launch-at-login is managed from the app's own Settings.
+  EOS
+
+  zap trash: [
+    "~/Library/Application Support/Hisingen",
+    "~/Library/Caches/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f",
+    "~/Library/HTTPStorages/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f",
+    "~/Library/Preferences/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f.plist",
+    "~/Library/Saved Application State/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f.savedState",
+    "~/Library/WebKit/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f"
+  ]
+end

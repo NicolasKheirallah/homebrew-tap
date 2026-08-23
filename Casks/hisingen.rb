@@ -13,14 +13,14 @@ cask "hisingen" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
-
-  app "Hisingen.app"
+  depends_on macos: :sonoma
 
   caveats <<~EOS
     Hisingen may ask for Keychain and Accessibility access on first launch.
     Launch-at-login is managed from the app's own Settings.
   EOS
+
+  app "Hisingen.app"
 
   zap trash: [
     "~/Library/Application Support/Hisingen",
@@ -28,6 +28,6 @@ cask "hisingen" do
     "~/Library/HTTPStorages/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f",
     "~/Library/Preferences/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f.plist",
     "~/Library/Saved Application State/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f.savedState",
-    "~/Library/WebKit/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f"
+    "~/Library/WebKit/io.kheirallah.hisingen-cc97f41c-af39-4eb1-a7e6-0014f6e1c80f",
   ]
 end

@@ -2,8 +2,7 @@ cask "hisingen" do
   version "2.0.6"
   sha256 "5b8155fca5f17d448176553cadf9b3417e8dc369a3ff9ff02fa7bc49973cd1e7"
 
-  url "https://github.com/NicolasKheirallah/Hisingen/releases/download/v#{version}/Hisingen.dmg",
-      verified: "github.com/NicolasKheirallah/Hisingen/"
+  url "https://github.com/NicolasKheirallah/Hisingen/releases/download/v#{version}/Hisingen.dmg"
   name "Hisingen"
   desc "Polestar and Volvo vehicles in the menu bar"
   homepage "https://github.com/NicolasKheirallah/Hisingen"
@@ -13,7 +12,7 @@ cask "hisingen" do
     strategy :github_latest
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Hisingen.app"
 

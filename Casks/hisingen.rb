@@ -1,6 +1,6 @@
 cask "hisingen" do
-  version "2.0.10"
-  sha256 "e891a56b8a89a397622862530c777ef67365a1fbce10dfa75dc46fc5b497defc"
+  version "2.0.12"
+  sha256 "2ab1905bd41d7409f6418e5f6ba37e2cafd428ae2c2a2c5706ba26bd0794cd7d"
 
   url "https://github.com/NicolasKheirallah/Hisingen/releases/download/v#{version}/Hisingen.dmg",
       verified: "github.com/NicolasKheirallah/Hisingen/"
